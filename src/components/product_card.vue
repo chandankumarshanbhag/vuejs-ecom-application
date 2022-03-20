@@ -8,7 +8,8 @@
         <p class="price">
         ₹{{ product.price }}
       </p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <a v-if="!qty" href="#" class="btn btn-primary" @click="$store.commit('addItems',product)">Add to cart</a>
+      <a v-else href="#" class="btn btn-primary">QTY {{qty}}</a>
     </div>
   </div>
 </template>
@@ -20,6 +21,10 @@ export default {
       type: Object,
       required: true,
     },
+    qty: {
+      type: Number,
+      required: false
+    }
   },
 };
 </script>
