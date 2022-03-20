@@ -1,5 +1,7 @@
 # vuejs-ecom
 
+[Preview](https://vuejs-ecom.netlify.com/)
+
 ## Project setup
 ```
 npm install
